@@ -104,3 +104,32 @@ dataset/
 ◦ Please ensure that the paths in your configuration files are consistent with this directory structure.
 
 
+### 3. Training
+
+在 DOTA-v1.0 上以图像大小 640 训练 ESODNet 300 个 epoch为例：
+
+```bash
+yolo detect train \
+  data=DSODNet/dataset/DOTA-v1.0.yaml \
+  model=DSODNet/model/DOTA-v1.0.yaml \
+  epochs=300 \
+  imgsz=640
+```
+### 4. 验证
+
+在 DOTA-v1.0 数据集上验证经过训练的 ESODNet 模型准确性。  
+无需额外传递数据集等参数，因为模型在训练时已经将对应的数据集和超参数作为模型属性保存。
+
+```bash
+yolo detect val \
+  model=ESODNet/workdirs/runs/val/best.pt
+```
+### 5. 预测
+
+使用经过训练的 ESODNet-n 模型对 DOTA-v1.0 测试集中的图像进行预测，例如对单张 `00078.jpg` 做推理：
+
+```bash
+yolo detect predict \
+  model=ESODNet/workdirs/runs/train/best.pt \
+  source='ESODNet/dataset/DOTA-v1.0/test/00078.jpg'
+```
