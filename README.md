@@ -36,4 +36,26 @@ all of which complicate the accurate classification and regression of objects.
 <img width="16190" height="6150" alt="Fig  2" src="https://github.com/user-attachments/assets/6d340e30-c583-42ba-bad1-f3f11ce3dd9d" />
 Overall architecture of ESODNet with a lightweight backbone, the CSAD neck, and the LTFA Head that jointly support real-time multi-scale object prediction.
 
+## 🎮 Getting Started
+
+### 1. Install Environment
+
+```bash
+# 1) 创建并激活 Conda 环境
+conda create --name ESODNet python=3.8
+conda activate ESODNet
+
+# 2) 安装 PyTorch（CUDA 11.1 对应版本）
+pip install torch==1.10.0+cu111 torchvision==0.11.0+cu111 torchaudio==0.10.0 \
+  -f https://download.pytorch.org/whl/torch_stable.html
+
+# 3) 安装 mmcv 和 mmengine
+pip install mmcv==2.1.0 mmengine==0.9.0
+
+# 4) 克隆本项目并安装依赖
+git clone https://github.com/niuxuelei/ESODNet.git
+cd ESODNet
+pip install -r requirements.txt
+
+
 
