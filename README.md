@@ -57,5 +57,40 @@ git clone https://github.com/niuxuelei/ESODNet.git
 cd ESODNet
 pip install -r requirements.txt
 
+### 2. Prepare Dataset
+
+Download the DOTA-v1.0 dataset (https://captain-whu.github.io/DOTA/index.html)  
+and the DIOR dataset (https://gcheng-nwpu.github.io/#Datasets),  
+then organize them as follows (we take DOTA-v1.0 as an example):
+
+```text
+dataset/
+├── DOTA-v1.0/
+│   ├── images/
+│   │   ├── train/
+│   │   │   ├── 00001.jpg
+│   │   │   ├── 00002.jpg
+│   │   │   ├── ...
+│   │   ├── val/
+│   │   │   ├── 00001.jpg
+│   │   │   ├── 00002.jpg
+│   │   │   ├── ...
+│   │   └── test/
+│   │       ├── 00001.jpg
+│   │       ├── 00002.jpg
+│   │       ├── ...
+│   └── labels/
+│       ├── train/
+│       │   ├── 00001.txt
+│       │   ├── 00002.txt
+│       │   ├── ...
+│       ├── val/
+│       │   ├── 00001.txt
+│       │   ├── 00002.txt
+│       │   ├── ...
+│       └── test/
+│           ├── 00001.txt
+│           ├── 00002.txt
+│           ├── ...
 
 
