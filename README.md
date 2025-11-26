@@ -42,8 +42,8 @@ Overall architecture of CLADet with a lightweight backbone, the CLAD neck, and t
 
 ```bash
 1) 创建并激活 Conda 环境
-conda create --name ESODNet python=3.8
-conda activate ESODNet
+conda create --name CLADet python=3.8
+conda activate CLADet
 
 2) 安装 PyTorch（CUDA 11.1 对应版本）
 pip install torch==1.10.0+cu111 torchvision==0.11.0+cu111 torchaudio==0.10.0 \
@@ -53,8 +53,8 @@ pip install torch==1.10.0+cu111 torchvision==0.11.0+cu111 torchaudio==0.10.0 \
 pip install mmcv==2.1.0 mmengine==0.9.0
 
 4) 克隆本项目并安装依赖
-git clone https://github.com/niuxuelei/ESODNet.git
-cd ESODNet
+git clone https://github.com/niuxuelei/CLADet.git
+cd CLADet
 pip install -r requirements.txt
 ```
    
@@ -117,7 +117,7 @@ yolo detect train \
 ```
 ### 4. 验证
 
-在 DOTA-v1.0 数据集上验证经过训练的 ESODNet 模型准确性。  
+在 DOTA-v1.0 数据集上验证经过训练的 CLADet 模型准确性。  
 无需额外传递数据集等参数，因为模型在训练时已经将对应的数据集和超参数作为模型属性保存。
 
 ```bash
